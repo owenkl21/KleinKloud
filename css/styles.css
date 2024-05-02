@@ -1,0 +1,11 @@
+:root{ 
+
+  /* This is the colors on the site that create the main theme of the website*/
+  --color-primary: #2584ff;
+  --color-secondary: #00d9ff;
+  --color-accent: #ff3400;
+
+/* This is the colors on the site that create the main theme of the website Text sections like headers and body text and so on*/
+  --color-headings: #1b0760;
+  --color-body: #918ca4;
+}
