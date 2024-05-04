@@ -329,11 +329,11 @@ a {
 /* Cards */
 
 .card {
-  transition: ease-out 0.8s;
-  -webkit-transition: ease-out 0.8s;
-  -moz-transition: ease-out 0.8s;
-  -ms-transition: ease-out 0.8s;
-  -o-transition: ease-out 0.8s;
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -ms-transition: transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
   overflow: hidden;
   box-shadow: 0 0 20px 10px #f3f3f3;
   border-radius: 7px;
@@ -359,11 +359,7 @@ a {
 }
 
 .card:hover {
-  scale: 1.05;
-  transition: ease-in 0.8s;
-  -webkit-transition: ease-in 0.8s;
-  -moz-transition: ease-in 0.8s;
-  -ms-transition: ease-in 0.8s;
-  -o-transition: ease-in 0.8s;
+  transform: scale(1.05);
+  
 }
 
