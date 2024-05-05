@@ -123,6 +123,7 @@ a {
 
 .badge--small {
   font-size: 1.6rem;
+  padding: 0.5rem 1.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -137,6 +138,8 @@ a {
 /* Lists */
 
 .list {
+  
+  font-weight: 500;
   list-style: none;
   padding-left: 0;
   color: var(--color-headings);
@@ -218,6 +221,7 @@ a {
   text-transform: uppercase;
   white-space: nowrap;
   text-align: center;
+  
 }
 
 .button--secondary {
@@ -230,12 +234,12 @@ a {
   color: #fff;
 }
 
-.button--cards {
+.button--cards:hover {
   background: var(--color-headings);
   color: #fff;
 }
 
-.button--cards:hover {
+.button--cards {
   -moz-transition: 0.5s;
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
@@ -270,7 +274,7 @@ a {
 
 .button {
   display: inline-flex;
-  width: calc(flex-grow);
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -278,6 +282,7 @@ a {
 @media screen and (min-width: 1024px) {
   .button {
     font-size: 1.5rem;
+    width: 100%;
   }
 }
 
@@ -329,13 +334,14 @@ a {
 /* Cards */
 
 .card {
+  margin: 40px;
   transition: transform 0.5s ease-in-out;
   -webkit-transition: transform 0.5s ease-in-out;
   -moz-transition: transform 0.5s ease-in-out;
   -ms-transition: transform 0.5s ease-in-out;
   -o-transition: transform 0.5s ease-in-out;
   overflow: hidden;
-  box-shadow: 0 0 20px 10px #f3f3f3;
+  box-shadow: 0 0 10px 1px #cfcfcf;
   border-radius: 7px;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
@@ -358,8 +364,54 @@ a {
   color: #fff;
 }
 
+.card--secondary .badge--secondary {
+  background: #02cdf1;
+}
 .card:hover {
   transform: scale(1.05);
-  
 }
 
+
+/* Plans */
+
+.plan__name{
+  color: #fff;
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+.plan__price{
+  font-size: 6rem;
+}
+
+.plan__billing-cycle{
+  font-size: 2.4rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-right: 1rem;
+}
+
+
+.plan__description{
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.plan .list__item{
+ 
+  margin-bottom: 2rem;
+}
+
+.grouped--plans{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .grouped--plans {
+    flex-direction: column;
+  }
+}
