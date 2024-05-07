@@ -236,7 +236,7 @@ a {
   text-transform: uppercase;
   white-space: nowrap;
   text-align: center;
-  width: 100%;
+  width: 100%; /* Add this line to make the button take up full width */
 }
 
 .button--secondary {
@@ -852,6 +852,7 @@ a {
   .hero__container {
     grid-template-columns: 1fr 1fr; /* Two columns on desktop */
     align-items: center;
+    gap: 6rem;
   }
   .hero__heading {
     color: #fff;
@@ -865,4 +866,33 @@ a {
     text-align: left;
     margin: 2rem 0 5rem 0;
   }
+  .buttonDiv {
+    width: 100%;
+
+    padding: 0 !important; /* Adjust as needed */
+    box-sizing: border-box; /* Include padding and border in the total width */
+  }
+
+  .buttonDiv > a {
+    display: block; /* or inline-block */
+    width: 100%;
+    max-width: 100%; /* Set to 100% to prevent overflow */
+    text-align: center; /* Center the text horizontally */
+    box-sizing: border-box; /* Include padding and border in the total width */
+  }
+}
+
+.buttonDiv {
+  width: 100%;
+
+  padding: 10px; /* Adjust as needed */
+  box-sizing: border-box; /* Include padding and border in the total width */
+}
+
+.buttonDiv > a {
+  display: block; /* or inline-block */
+  width: 100%;
+  max-width: 100%; /* Set to 100% to prevent overflow */
+  text-align: center; /* Center the text horizontally */
+  box-sizing: border-box; /* Include padding and border in the total width */
 }
