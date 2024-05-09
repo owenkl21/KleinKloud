@@ -37,11 +37,11 @@ h6 {
 }
 
 h1 {
-  font-size: 7rem;
+  font-size: 5rem !important;
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 3.3rem !important;
 }
 
 h3 {
@@ -313,11 +313,49 @@ a {
   color: #cdcbd7;
 }
 
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 1024px) {
   .input {
     font-size: 1.5rem;
   }
+  .input-group .button {
+    position: relative;
+    max-width: 200px;
+    top: 0;
+    right: 0 !important;
+  }
 }
+
+
+
+
+@media screen and (min-width: 768px) {
+  .input {
+    font-size: 1.5rem;
+  }
+
+  .input-group .button {
+    position: relative;
+    max-width: 200px;
+    top: 0;
+    right: 0 !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .input {
+    font-size: 1.5rem;
+  }
+.input-group .input {
+  border: 0;
+  font-size: 1.8rem;
+  padding: 1.5rem 1rem;
+}
+  .input-group .button {
+    
+    
+  }
+}
+
 
 .input-group {
   padding: 0.5rem;
@@ -336,8 +374,126 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
+  font-size: 1.8rem;
   padding: 1.5rem 1rem;
 }
+
+.input-group .button {
+  position: relative;
+  max-width: 200px;
+  top: 0;
+  right:0;
+} */
+
+.input-group {
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  /*Useflexbox*/align-items: center;
+  /*Alignitemsvertically*/border: 1px solid var(--color-border);
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.input-group .input {
+  border: 0;
+  font-size: 2.4rem;
+  padding: 1.5rem 1rem;
+}
+
+.input-group .button {
+  max-width: 200px;
+  font-size: 1.8rem;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  transition: color 0.5s, background-color 0.5s !important;
+  -webkit-transition: color 0.5s, background-color 0.5s !important;
+  -moz-transition: color 0.5s, background-color 0.5s !important;
+  -ms-transition: color 0.5s, background-color 0.5s !important;
+  -o-transition: color 0.5s, background-color 0.5s !important;
+}
+
+.input-group .button > svg{
+  width: 1.5em;
+  height: 1.5em;
+}
+.input-group .button:hover >svg {
+  transition:color 0.5s;
+  fill: var(--color-accent);
+  -webkit-transition:color 0.5s;
+  -moz-transition:color 0.5s;
+  -ms-transition:color 0.5s;
+  -o-transition:color 0.5s;
+}
+
+@media screen and (max-width: 767px) {
+  .input-group .input {
+    font-size: 1.8rem;
+  }
+
+  .input-group .button {
+    font-size: 1.8rem;
+    padding: 1.5rem 1rem;
+  max-width: 16%;
+
+  }
+
+
+ .input-group .button {
+  max-width: 15%;
+   color: transparent;
+   /* Hide the original content */
+   font-size: 1.8rem;
+   padding: 1.5rem 1rem;
+   border: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   /* Add position relative */
+ }
+ 
+ .input-group .button:hover {
+   /*Addanystyleshereifyouwanttochangethebuttononhover*/background-color:var(--color-accent);
+   transform:scale(0.9) ;
+   -webkit-transform:scale(0.95) ;
+   -moz-transform:scale(0.9) ;
+   -ms-transform:scale(0.9) ;
+   -o-transform:scale(0.9) ;
+   transition: all 0.3s ease-in;
+   -webkit-transition: all 0.3s ease-in;
+   -moz-transition: all 0.3s ease-in;
+   -ms-transition: all 0.3s ease-in;
+   -o-transition: all 0.3s ease-in;
+}
+
+
+ .input-group .button::before {
+   content: url('../images/search.svg');
+   /* Add the SVG icon */
+   display: block;
+   width: 1.5em;
+   /* Adjust the size of the icon */
+   height: 1.5em;
+   /* Adjust the size of the icon */
+   position: absolute;
+   /* Position the icon */
+   top: 50%;
+   /* Align the icon vertically */
+   left: 50%;
+   /* Align the icon horizontally */
+   transform: translate(-50%, -50%);
+   /* Center the icon */
+ }
+}
+
 
 /* Cards */
 
@@ -711,8 +867,16 @@ a {
   padding: --padding-vertical 2rem;
 }
 
+
+@media screen and (min-width: 768px) {
+  .block__header {
+    text-align: center;
+    padding: 6rem !important;
+  }
+}
 .block__header {
   text-align: center;
+  padding: 1rem;
 }
 
 .block--dark {
@@ -823,10 +987,12 @@ a {
 
 /* Hero Section */
 
+
 .hero__heading {
   color: #fff;
   font-size: 6rem;
   text-align: center;
+  margin-top: 10rem;
 }
 
 .hero__tagline {
@@ -841,13 +1007,14 @@ a {
 }
 
 .hero__container {
+ 
   display: grid;
   grid-template-columns: 1fr; /* Default to one column */
   justify-items: center;
   text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width:1024px) {
   /* Adjust the breakpoint as needed */
   .hero__container {
     grid-template-columns: 1fr 1fr; /* Two columns on desktop */
@@ -858,6 +1025,7 @@ a {
     color: #fff;
     font-size: 6rem;
     text-align: left;
+    margin-top: 40%;
   }
 
   .hero__tagline {
@@ -895,4 +1063,52 @@ a {
   max-width: 100%; /* Set to 100% to prevent overflow */
   text-align: center; /* Center the text horizontally */
   box-sizing: border-box; /* Include padding and border in the total width */
+}
+
+/* Domain Block */
+
+.block-domain h2{
+  padding: 1rem;
+
+}
+.block-domain p {
+  padding: 1rem;
+
+}
+
+.block-domain .input-group {
+  margin-top: 1rem;
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+}
+.accent__word{
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.block-domain__prices{
+  margin-top: 3rem !important;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  max-width: 350px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    margin-top: 3rem !important;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    font-size: 2rem;
+    max-width: 1200px;
+    font-weight: 600;
+    justify-items: center;
+  }
+}
+
+.block-domain .badge{
+  font-size: 2rem;
 }
