@@ -20,6 +20,7 @@ body {
   color: var(--color-body);
   font-size: 2.4rem;
   line-height: 1.5;
+  
 }
 
 /* Typography */
@@ -735,6 +736,8 @@ a {
   padding: 3rem;
   text-align: left;
   border-radius: 10px;
+  position: relative;
+  top: -6rem;
 }
 
 .callout .grid {
@@ -756,7 +759,7 @@ a {
   }
   .callout .callout__content > h2 {
     text-align: center;
-    font-size: 2.4rem !important;
+    font-size: 3rem !important;
   }
   .callout .callout__content > p {
     text-align: center;
@@ -808,6 +811,7 @@ a {
 }
 .collapsible__content > li {
   margin: 20px 0;
+  
 }
 .collapsible--expander .collapsible__chevron {
   transform: rotate(0deg) !important;
@@ -833,12 +837,16 @@ a {
   margin-top: 15px;
 }
 
-/* Blocks */
 
+/* Blocks */
+.first-block{
+  padding-top: 6rem;
+}
 .block {
   --padding-vertical: 6rem;
   padding: --padding-vertical 2rem;
 }
+
 
 
 @media screen and (min-width: 768px) {
@@ -863,11 +871,11 @@ a {
 }
 
 .block--skewed-right {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 
 .block--skewed-left {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
 .container {
@@ -896,7 +904,15 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: fixed; top: 0; width: 100%;
+  overflow: hidden;
+  z-index: 1000;
+  width: 100vw;
+
 }
+
+
+
 
 .nav__list {
   width: 100%;
@@ -905,7 +921,7 @@ a {
 }
 .nav__image {
   transform: translateY(0.5rem);
-  width: 250px;
+  width: 150px;
   -webkit-transform: translateY(0.5rem);
   -moz-transform: translateY(0.5rem);
   -ms-transform: translateY(0.5rem);
@@ -1159,7 +1175,7 @@ margin-bottom: 1rem;
   align-items: center !important; /* Center horizontally */
   width: 100%;
   gap: 5rem;
-  margin-bottom: 10rem !important;
+  padding-bottom: 0!important;
 }
 
 .showcase-heading{
@@ -1175,7 +1191,10 @@ margin-bottom: 1rem;
   justify-content: start; /* Center content vertically */
   align-items: center; /* Center content horizontally */
   margin: auto;
+  
 }
+
+
 
 .showcase-media h3 {
   color: #fff !important;
@@ -1205,6 +1224,11 @@ margin-bottom: 1rem;
 
 
 /* Quote */
+
+.quote-heading{
+  margin-top: 0 !important;
+
+}
 
 .block__quote .feature{
   text-align: center !important; /* Center align all text */
@@ -1236,7 +1260,7 @@ margin-bottom: 1rem;
   margin: 0 auto;
 }
 
-@media screen and  (min-width: 1024px) {
+@media screen and  (min-width: 768px) {
   .block-quote{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -1246,3 +1270,83 @@ margin-bottom: 1rem;
   
 }
 
+/* Footer */
+
+
+.block-footer{
+  font-size: 2rem!important;
+background: #222;
+padding: 2rem
+}
+
+.block-footer h2{
+  font-size: 3rem!important;
+background: #222;
+padding: 2rem;
+font-weight: 300 !important;
+}
+
+
+.block-footer .collapsible__header{
+  margin-top: 2rem ;
+  }
+
+.block-footer .collapsible__content{
+  padding-left: 2rem;
+  }
+
+  .block-footer--copyright{
+   padding: 5rem 0 3rem 0;
+    text-align: center;
+    color:#fff;
+    opacity: 0.5;
+  }
+
+  .callout__content h2{
+    background-color: transparent;
+    font-size: 4rem !important;
+    font-weight: 600 !important;
+  }
+  .collapsible__break__desktop{
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    .footer-grid{
+     display: flex;
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+     justify-content: space-evenly;
+    }
+    .collapsible__chevron, .collapsible .icon-container{
+      display: none;
+    }
+
+     .collapsible__content{
+      opacity: 1 !important;
+      max-height: 100%;
+      color: #fff !important;
+    }
+    
+    .collapsible__content .list__item{
+      color:  #fff !important;
+      opacity: 0.5 !important;
+    }
+    .collapsible__content .list__item:hover{
+      color:  #fff !important;
+      opacity: 1 !important;
+    }
+    .collapsible__break{
+      display: none;
+    }
+
+    .collapsible__break__desktop{
+      display: block;
+      border: 1px solid #393939;
+    }
+
+  }
+
+  .tools{
+    fill: var(--color-primary);
+    stroke-width: 1px !important;
+  }

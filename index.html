@@ -4,7 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <meta name="description" content="Deploy your websites in less than 60 seconds.">
+  <meta property="og:title" content="KleinKloud...">
+  <meta property="og:description" content="Deploy your websites in less than 60 seconds.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https">
+  <title>KleinKloud - Go Online for just $9</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -15,10 +20,27 @@
 
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-  <section class="block block--dark block--skewed-left">
+  <nav class="nav collapsible ">
+    <a href="/"><img class="nav__image" src="images/logo.png" alt=""></a>
+
+    <svg class="nav__menu" xmlns="http://www.w3.org/2000/svg" height="20" width="17.5"
+      viewBox="0 0 448 512">
+      <path fill="#ffffff" d="M0 80H448V96H0V80zM0 240H448v16H0V240zM448 400v16H0V400H448z" />
+    </svg>
+
+    <ul class="list nav__list collapsible__content">
+      <li class="nav__item"><a href="#">Hosting</a></li>
+      <li class="nav__item"><a href="#">VPS</a></li>
+      <li class="nav__item"><a href="#">Domain</a></li>
+      <li class="nav__item"><a href="#">Pricing</a></li>
+
+    </ul>
+  </nav>
+  <section class="block block--dark block--skewed-left first-block">
     <div class=" container grid grid--cols-2 hero__container">
       <div class="hero_content">
         <h1 class="hero__heading">Cloud Hosting For Pro's</h1>
@@ -136,9 +158,9 @@
       </p>
     </header>
     <article class="grid grid--cols-2 feature">
-      <div>
+      <div data-aos="fade-right">
         <span class="icon-container">
-          <svg class="icon icon--primary" height="512" viewBox="0 0 512 512" width="512"
+          <svg  class="icon icon--primary" height="512" viewBox="0 0 512 512" width="512"
             xmlns="http://www.w3.org/2000/svg">
             <g id="Out_line" data-name="Out line">
               <path
@@ -158,14 +180,14 @@
           website without any technical expertise. Get started in minutes!</p>
         <a href="#" class="link-arrow">Learn More</a>
       </div>
-      <img src="images/easy.jpg">
+      <img data-aos="fade-left" src="images/easy.jpg">
     </article>
     <article class="grid grid--cols-2 feature">
-      <img src="images/fast.jpg">
-      <div>
+      <img data-aos="fade-right" src="images/fast.jpg">
+      <div data-aos="fade-left">
         <span class="icon-container">
           <svg class="icon icon--primary">
-            <use xlink:href="images/sprite.svg#computer"></use>
+            <use xlink:href="images/sprite.svg#clock"></use>
           </svg>
         </span>
         <h3>Simple Fast Websites</h3>
@@ -175,7 +197,7 @@
       </div>
     </article>
     <article class="grid grid--cols-2 feature">
-      <div>
+      <div data-aos="fade-right">
         <span class="icon-container">
           <svg class="icon icon--primary">
             <use xlink:href="images/sprite.svg#settings"></use>
@@ -186,7 +208,7 @@
           Enjoy hassle-free WordPress hosting!</p>
         <a href="#" class="link-arrow">Learn More</a>
       </div>
-      <img src="images/wordpress.jpg">
+      <img data-aos="fade-left" src="images/wordpress.jpg">
     </article>
   </section>
   <section class="block block--dark block--skewed-right block__showcase">
@@ -203,7 +225,7 @@
         <img src="images/ipad.png" alt="">
       </div>
       <div class="showcase-media">
-        <div class="media">
+        <div data-aos="fade-left"class="media ">
           <div class="media__image">
             <svg class="icon icon--primary">
               <use xlink:href="images/sprite.svg#wordpress"></use>
@@ -216,10 +238,10 @@
             </p>
           </div>
         </div>
-        <div class="media">
+        <div data-aos="fade-left" class="media">
           <div class="media__image">
             <svg class="icon icon--primary">
-              <use xlink:href="images/sprite.svg#wordpress"></use>
+              <use xlink:href="images/sprite.svg#computer"></use>
             </svg>
           </div>
           <div class="media__body">
@@ -229,16 +251,14 @@
             </p>
           </div>
         </div>
-        <div class="media">
+        <div data-aos="fade-left" class="media">
           <div class="media__image">
-            <svg class="icon icon--primary">
-              <use xlink:href="images/sprite.svg#wordpress"></use>
-            </svg>
+            
+            <svg  class="icon icon--primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M160 160V112L67 42.3 42.3 67 112 160h48zm32 0v9.4l99.3 99.3 14.1-14.1L328 232l22.6 22.6L489.4 393.4 512 416l-22.6 22.6-50.7 50.7L416 512l-22.6-22.6L254.6 350.6 232 328l22.6-22.6 14.1-14.1L169.4 192H160 96L0 64 64 0 192 96v64zM416 466.7L466.7 416 328 277.3 277.3 328 416 466.7zM22.6 377.4L166.1 233.9l22.6 22.6L45.3 400 112 466.7 218.7 360l22.6 22.6L134.6 489.4 112 512 89.4 489.4 22.6 422.6 0 400l22.6-22.6zM480 160c0-10.7-1.3-21.1-3.8-31l-53.6 53.6-9.4 9.4H400 352 320V160 112 98.7l9.4-9.4L383 35.8c-9.9-2.5-20.3-3.8-31-3.8c-46.5 0-87.2 24.8-109.6 61.8L216.7 74.5C245.1 29.7 295.1 0 352 0c19.9 0 38.9 3.6 56.5 10.3c10.6 4 20.7 9.1 30.1 15.2L415.3 48.7 352 112v16 32h32 16l63.3-63.3 23.3-23.3c6.1 9.4 11.2 19.5 15.2 30.1c6.6 17.6 10.3 36.6 10.3 56.5c0 57.2-30 107.3-75.1 135.6l-23.4-23.4C453.1 250.5 480 208.4 480 160zM120 414.6L97.4 392 120 369.4 142.6 392 120 414.6z"/></svg>
           </div>
           <div class="media__body">
             <h3 class="media__title">Dynamic Caching & More</h3>
-            <p>Speed up your site with our dynamic caching powered by Redis and Memcached, and more tools for your
-              WordPress and WooCommerce sites.</p>
+            <p>Speed up your site with our dynamic caching powered by Redis and Memcached.</p>
             </p>
           </div>
         </div>
@@ -246,8 +266,8 @@
     </div>
   </section>
   <section class="grid grid--cols-2 feature block-quote">
-    <header class="block__header function-heading">
-      <h1 class="block__heading  funtion-heading">What our Customers are Saying</h1>
+    <header class="block__header function-heading ">
+      <h1 class="block__heading  funtion-heading quote-heading">What our Customers are Saying</h1>
       <p class="block__tag">
         Hear from our <span class="accent__word">satisfied customers</span> and discover how our <span
           class="accent__word">hosting services</span> have transformed their online presence.
@@ -284,7 +304,96 @@
       </footer>
     </blockquote>
   </section>
+  <section class="block-footer">
+    <div class="callout callout--primary">
+
+      <div class="grid grid--cols-2">
+        <div class="callout__content">
+          <h2>Ready To Get Started?</h2>
+          <p>Choose teh hosting provider that helps you start easy, build fast, and grow strong! It's risk-free with our
+            14-day money back guarantee.</p>
+        </div>
+        <div class="callout__button"><button class="button button--secondary">Get Started</button></div>
+      </div>
+    </div>
+    <div class="footer-grid">
+    <div class="collapsible">
+      <header class="collapsible__header">
+        <h2>Products</h2> <span class="icon-container ">
+          <svg class="collapsible__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z" />
+          </svg>
+        </span>
+      </header>
+      <div class="collapsible__content">
+        <li class="list__item">WordPress Hosting</li>
+        <li class="list__item">Free Automated WordPress</li>
+        <li class="list__item">Migrations</li>
+        <li class="list__item">Domain Names</li>
+        <li class="list__item">Monthly Web Hosting</li>
+
+      </div>
+      <div class="collapsible__break"></div>
+    </div>
+    <div class="collapsible">
+      <header class="collapsible__header">
+        <h2>Company</h2> <span class="icon-container ">
+          <svg class="collapsible__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z" />
+          </svg>
+        </span>
+      </header>
+      <div class="collapsible__content">
+        <li class="list__item">About Us</li>
+        <li class="list__item">Careers</li>
+        <li class="list__item">Press Releases</li>
+      </div>
+      <div class="collapsible__break"></div>
+    </div>
+    <div class="collapsible">
+      <header class="collapsible__header">
+        <h2>Support</h2> <span class="icon-container ">
+          <svg class="collapsible__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z" />
+          </svg>
+        </span>
+      </header>
+      <div class="collapsible__content">
+        <li class="list__item">Help Center</li>
+        <li class="list__item">Contact Support</li>
+        <li class="list__item">Knowledge Base</li>
+      </div>
+      <div class="collapsible__break"></div>
+    </div>
+    <div class="collapsible">
+      <header class="collapsible__header">
+        <h2>Domains</h2> <span class="icon-container ">
+          <svg class="collapsible__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z" />
+          </svg>
+        </span>
+      </header>
+      <div class="collapsible__content">
+        <li class="list__item">Register a Domain</li>
+        <li class="list__item">Transfer a Domain</li>
+        <li class="list__item">Domain Pricing</li>
+      </div>
+      <div class="collapsible__break"></div>
+    </div>
+   
+    </div>
+    <div class="collapsible__break__desktop"></div>
+    <div class="block-footer--copyright">Copyright &copy; 2024 KleinKloud. All Rights Reserved.</div>
+  </section>
   <script src="js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
